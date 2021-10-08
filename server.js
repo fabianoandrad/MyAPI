@@ -21,7 +21,7 @@ mongoose
     console.log("Falha ao conectar com o MongoDB!");
   });
 
-app.get("/", async (req, res) => {
+app.get("/api", async (req, res) => {
    await List.find({}).then((items) => {
      return res.json({
        list: items
